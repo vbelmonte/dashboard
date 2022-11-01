@@ -141,3 +141,47 @@ button {
     background-color: #FFC425;
     color: white;
 }
+
+.project-space {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.project-grid {
+    display: grid;
+    flex: 3;
+    gap: 12px;
+    grid-template-columns: repeat(2, min(350px, 50%));
+    grid-template-rows: repeat(3, min(225px, 50%));
+}
+
+.project-side {
+    flex: 1;
+}
+
+.project-card {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-card-border {
+    background-color: #FFC425;
+    width: 12px;
+    height: 100%;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.project-card-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    gap: 24px;
+}
