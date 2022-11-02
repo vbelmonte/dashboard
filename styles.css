@@ -37,6 +37,11 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+p {
+    color: #5E5E5E;
+    padding: 2px;
+}
+
 .sidebar ul {
     list-style: none;
     font-size: 1.2rem;
@@ -216,9 +221,21 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 24px;
+    padding: 28px;
 }
 
 .trending-cell p {
     margin: 0;
+    font-size: 0.8rem;
+}
+
+.trending-cell a {
+    color: #000000;
+    font-weight: 700;
+}
+
+.cell-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
