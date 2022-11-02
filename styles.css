@@ -33,13 +33,18 @@ body {
     background-color: #F0F0F0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
 p {
     color: #5E5E5E;
-    padding: 2px;
+    padding: 2px 0px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #D9D9D9;
 }
 
 .sidebar ul {
@@ -208,7 +213,15 @@ button {
 .announcements-card {
     background-color: #FFFFFF;
     border-radius: 16px;
-    padding: 24px;
+    padding: 28px;
+}
+
+.announcements-card p {
+    margin: 8px 0px;
+}
+
+.announcement {
+    padding: 10px;
 }
 
 .trending-cell {
