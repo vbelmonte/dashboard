@@ -159,31 +159,35 @@ button {
 }
 
 .project-space {
-    /*display: flex;
-    gap: 30px;*/
+    display: flex;
+    gap: 40px;
     padding: 40px;
 
     background-color: #F0F0F0;
 }
 
 .headline {
-    margin: 20px 0px;
+    margin: 16px 0px;
+}
+
+.projects {
+    flex: 1;
 }
 
 .project-grid {
     display: grid;
     flex: 3;
     gap: 25px;
-    grid-template-columns: repeat(2, minmax(100px, 50%));
+    grid-template-columns: repeat(2, minmax(250px, 50%));
     grid-template-rows: 225px;
     grid-auto-rows: 225px;
 }
 
 .project-side {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
-    grid-template-rows: auto auto auto auto;
-    flex: 1;
+    width: 300px;
 }
 
 .card {
