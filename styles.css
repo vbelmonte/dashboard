@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5 {
 
 p {
     color: #5E5E5E;
-    padding: 2px 0px;
+    line-height: 1.4rem;
 }
 
 hr {
@@ -110,6 +110,7 @@ input[type=text] {
     background-color: #FFFFFF;
     color: #1E1E1E;
     font-size: 1rem;
+    font-family: "Inter", "Arial", sans-serif;
     padding: 10px 14px;
     border-radius: 20px;
 }
@@ -251,10 +252,10 @@ button {
     background-color: #FFFFFF;
     border-radius: 16px;
     padding: 28px;
+    font-size: 0.8rem;
 }
 
 .announcements-card p {
-    font-size: 0.8rem;
     margin: 8px 0px;
 }
 
@@ -273,11 +274,11 @@ button {
     flex-direction: column;
     gap: 20px;
     padding: 28px;
+    font-size: 0.8rem;
 }
 
 .trending-cell p {
     margin: 0;
-    font-size: 0.8rem;
 }
 
 .trending-cell a {
