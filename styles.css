@@ -61,6 +61,7 @@ hr {
     background-color: #3E322D;
     border-left: solid 4px #FFC425;
     padding-left: 36px;
+    transition: linear 0.1s;
 }
 
 .sidebar a {
@@ -168,7 +169,12 @@ button {
 
 .yellow-btn {
     background-color: #FFC425;
-    color: white;
+    color: #1E1E1E;
+    transition: background-color linear 0.1s;
+}
+
+.yellow-btn:hover {
+    background-color: #ffd45f;
 }
 
 .project-space {
