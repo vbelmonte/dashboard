@@ -19,17 +19,13 @@ body {
 
     background-color: #2F241D;
     color: #FFFFFF;
-    padding: 30px;
 }
 
 .sidebar-logo {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.sidebar a:hover {
-    color: #FFC425;
+    padding: 20px;
 }
 
 .header {
@@ -53,12 +49,18 @@ hr {
 
 .sidebar ul {
     list-style: none;
-    font-size: 1.2rem;
-    padding-left: 20px;
+    padding: 0;
 }
 
 .sidebar ul li {
-    padding: 8px 0px;
+    padding: 12px 40px;
+}
+
+.sidebar ul li:hover {
+    color: #FFC425;
+    background-color: #3E322D;
+    border-left: solid 4px #FFC425;
+    padding-left: 36px;
 }
 
 .sidebar a {
@@ -66,7 +68,12 @@ hr {
     gap: 20px;
 }
 
-.sidebar ul li span, .icon {
+.sidebar ul li span {
+    position: relative;
+    bottom: -1px;
+}
+
+.icon {
     position: relative;
     bottom: -2px;
 }
