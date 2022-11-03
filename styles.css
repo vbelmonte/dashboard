@@ -21,6 +21,10 @@ body {
     padding: 30px;
 }
 
+.sidebar a:hover {
+    color: #FFC425;
+}
+
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -54,9 +58,12 @@ hr {
 }
 
 .sidebar ul li {
+    padding: 8px 0px;
+}
+
+.sidebar a {
     display: flex;
     gap: 14px;
-    padding: 8px 0px;
 }
 
 .sidebar ul li span, .icon {
