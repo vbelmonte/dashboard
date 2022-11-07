@@ -105,11 +105,15 @@ hr {
 
 .top-header, .bottom-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
 
-.search-bar, .greeting {
-    flex: 1;
+.search-bar {
+    min-width: 500px;
+    max-width: 700px;
+    width: 100%;
 }
 
 input[type=text] {
@@ -129,7 +133,7 @@ input[type=text]:focus-visible, input[type=text]:focus {
 }
 
 #search {
-    width: 550px;
+    width: 100%;
 }
 
 label[for=search], .profile-bar, .greeting {
