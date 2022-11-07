@@ -1,24 +1,38 @@
 body {
+    color: #1E1E1E;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Inter", "Arial", sans-serif;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 300px 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 275px 1fr;
+}
 
-    height: 100%;
+.main {
+    grid-column: 2 / 3;
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
 
     background-color: #2F241D;
     color: #FFFFFF;
-    padding: 30px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 30px 20px 20px;
 }
 
 .header {
@@ -26,37 +40,57 @@ body {
     grid-row: 1 / 2;
 }
 
-.project-space {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    background-color: #F0F0F0;
+h1, h2, h3, h4, h5 {
+    margin: 0;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
+p {
+    color: #5E5E5E;
+    line-height: 1.4rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #D9D9D9;
+}
+
+.menu {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .sidebar ul {
     list-style: none;
-    font-size: 1.2rem;
-    padding-left: 20px;
+    padding: 0;
 }
 
 .sidebar ul li {
-    display: flex;
-    gap: 14px;
-    padding: 8px 0px;
+    padding: 12px 40px;
 }
 
-.sidebar ul li span, .icon {
+.sidebar ul li:hover {
+    color: #FFC425;
+    background-color: #3E322D;
+    border-left: solid 4px #FFC425;
+    padding-left: 36px;
+    transition: linear 0.1s;
+}
+
+.sidebar a {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar ul li span {
+    position: relative;
+    bottom: -1px;
+}
+
+.icon {
     position: relative;
     bottom: -2px;
-}
-
-.bottom-menu {
-    position: absolute;
-    bottom: 0px;
 }
 
 .header {
@@ -71,25 +105,35 @@ h1, h2, h3, h4 {
 
 .top-header, .bottom-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
 
-.search-bar, .greeting {
-    flex: 1;
+.search-bar {
+    min-width: 500px;
+    max-width: 700px;
+    width: 100%;
 }
 
 input[type=text] {
     appearance: none;
 
-    border: none;
-    background-color: #D9D9D9;
+    border: solid 1px #D9D9D9;
+    background-color: #FFFFFF;
+    color: #1E1E1E;
     font-size: 1rem;
+    font-family: "Inter", "Arial", sans-serif;
     padding: 10px 14px;
     border-radius: 20px;
 }
 
+input[type=text]:focus-visible, input[type=text]:focus {
+    outline-color: #1E1E1E;
+}
+
 #search {
-    width: 550px;
+    width: 100%;
 }
 
 label[for=search], .profile-bar, .greeting {
@@ -110,17 +154,21 @@ label[for=search], .profile-bar, .greeting {
 }
 
 .photo-small {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .photo-med {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
 }
 
 .greeting, .greeting > div:first-child {
     display: flex;
+}
+
+.greeting-text {
+    font-size: 1.2rem;
 }
 
 .project-btns {
@@ -139,32 +187,44 @@ button {
 
 .yellow-btn {
     background-color: #FFC425;
-    color: white;
+    color: #1E1E1E;
+    transition: background-color linear 0.1s;
+}
+
+.yellow-btn:hover {
+    background-color: #ffd45f;
 }
 
 .project-space {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     padding: 40px;
+
+    background-color: #F0F0F0;
 }
 
 .headline {
-    grid-column: 1 / 3;
+    margin: 16px 0px;
+}
+
+.projects {
+    flex: 1;
 }
 
 .project-grid {
     display: grid;
     flex: 3;
     gap: 25px;
-    grid-template-columns: repeat(2, min(350px, 50%));
-    grid-template-rows: auto repeat(3, min(225px, 50%));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 225px;
+    grid-auto-rows: 225px;
 }
 
 .project-side {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
-    grid-template-rows: auto auto auto auto;
-    flex: 1;
+    width: 300px;
 }
 
 .card {
@@ -190,6 +250,7 @@ button {
 .project-card-content {
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: 24px;
 }
 
@@ -203,7 +264,16 @@ button {
 .announcements-card {
     background-color: #FFFFFF;
     border-radius: 16px;
-    padding: 24px;
+    padding: 28px;
+    font-size: 0.8rem;
+}
+
+.announcements-card p {
+    margin: 8px 0px;
+}
+
+.announcement {
+    padding: 10px;
 }
 
 .trending-cell {
@@ -216,9 +286,21 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 24px;
+    padding: 28px;
+    font-size: 0.8rem;
 }
 
 .trending-cell p {
     margin: 0;
+}
+
+.trending-cell a {
+    color: #000000;
+    font-weight: 700;
+}
+
+.cell-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
