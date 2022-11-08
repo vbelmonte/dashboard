@@ -120,6 +120,10 @@ hr {
     width: 100%;
 }
 
+.search-icon {
+    display: none;
+}
+
 input[type=text] {
     appearance: none;
 
@@ -347,11 +351,12 @@ button {
     }
 }
 
-/* @media only screen and (max-width: 949px) {
-
-}
-
 @media only screen and (max-width: 899px) {
+
+    .grid-container {
+        grid-template-columns: auto 1fr;
+    }
+
     .project-side {
         flex-direction: column;
     }
@@ -359,9 +364,20 @@ button {
     .profile-bar > div > div {
         display: none;
     }
+    .search-bar {
+        display: none;
+    }
+
+    .search-icon {
+        display: contents;
+    }
+
+    .top-header {
+        justify-content: end;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
 
     .grid-container {
         display: grid;
