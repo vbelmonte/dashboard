@@ -61,6 +61,10 @@ hr {
     height: 100%;
 }
 
+.svg-logo {
+    min-width: 40px;
+}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -107,11 +111,11 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .search-bar {
-    min-width: 500px;
+    min-width: 250px;
     max-width: 700px;
     width: 100%;
 }
@@ -148,6 +152,10 @@ label[for=search], .profile-bar, .greeting {
     gap: 8px;
 }
 
+.profile-bar > div > div {
+    flex: none;
+}
+
 .profile-photo {
     background: grey;
     border-radius: 50%;
@@ -163,18 +171,22 @@ label[for=search], .profile-bar, .greeting {
     height: 100px;
 }
 
+.greeting, .search-bar {
+    flex: 1;
+}
+
 .greeting, .greeting > div:first-child {
     display: flex;
 }
 
 .greeting-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .project-btns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
+    gap: 8px;
 }
 
 button {
@@ -304,3 +316,120 @@ button {
     flex-direction: column;
     justify-content: center;
 }
+
+@media only screen and (max-width: 1024px) {
+
+    .bottom-header {
+        display: block;
+    }
+
+    .greeting {
+        margin-bottom: 20px;
+    }
+    
+    .project-space {
+        display: block;
+        gap: 40px;
+        padding: 40px;
+    
+        background-color: #F0F0F0;
+    }
+
+    .project-side {
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0px;
+        width: 100%;
+    }
+
+    .announcements, .trending {
+        flex: 1;
+    }
+}
+
+/* @media only screen and (max-width: 949px) {
+
+}
+
+@media only screen and (max-width: 899px) {
+    .project-side {
+        flex-direction: column;
+    }
+
+    .profile-bar > div > div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    
+    
+    .sidebar {
+        width: 4em;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .menu {
+        align-items: center;
+    }
+
+    .sidebar ul {
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        padding: 12px 0px;
+    }
+
+    .sidebar a {
+        justify-content: center;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .project-space {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header, .project-space {
+        padding: 12px;
+    }
+
+    .top-header {
+        justify-content: end;
+    }
+
+    .photo-med {
+        width: 70px;
+        height: 70px;
+    }
+
+    .project-btns {
+        gap: 8px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    }
+
+    .search-bar {
+        display: none;
+    }
+}*/
