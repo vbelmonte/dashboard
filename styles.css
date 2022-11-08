@@ -377,15 +377,15 @@ button {
     }
 }
 
-/*@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     .grid-container {
-        display: grid;
-        grid-template-columns: auto 1fr;
+        display: block;
     }
     
     
     .sidebar {
+        position: fixed;
         width: 4em;
     }
 
@@ -403,7 +403,11 @@ button {
     }
 
     .sidebar ul li {
-        padding: 12px 0px;
+        padding: 12px 4px;
+    }
+
+    .sidebar ul li:hover {
+        padding-left: 0px;
     }
 
     .sidebar a {
@@ -421,9 +425,15 @@ button {
     .project-space {
         padding: 20px;
     }
+
+    .main {
+        position: absolute;
+        top: 0;
+        left: 4rem;
+    }
 }
 
-@media only screen and (max-width: 480px) {
+/*@media only screen and (max-width: 480px) {
     .header, .project-space {
         padding: 12px;
     }
