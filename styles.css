@@ -150,7 +150,7 @@ label[for=search], .profile-bar, .greeting {
     gap: 20px;
 }
 
-.profile-bar > div {
+.account {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -231,7 +231,7 @@ button {
     display: grid;
     flex: 3;
     gap: 25px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     grid-template-rows: 225px;
     grid-auto-rows: 225px;
 }
@@ -433,29 +433,41 @@ button {
     }
 }
 
-/*@media only screen and (max-width: 480px) {
-    .header, .project-space {
-        padding: 12px;
+@media only screen and (max-width: 480px) {
+
+    .sidebar {
+        /*display: none;*/
+        width: 0;
+        overflow-x: hidden;
     }
 
     .top-header {
-        justify-content: end;
+        justify-content: space-between;
+        min-width: 275px;
     }
 
-    .photo-med {
-        width: 70px;
-        height: 70px;
+    .top-header > div:first-child {
+        display: flex;
+        gap: 20px;
     }
 
-    .project-btns {
-        gap: 8px;
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
 
-    .project-grid {
-        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    .hamburger-menu div {
+        background-color: #1E1E1E;
+        width: 30px;
+        height: 3px;
     }
 
-    .search-bar {
-        display: none;
+    .header, .project-space {
+        padding: 14px;
     }
-}*/
+
+    .main {
+        position: inherit;
+    }
+}
