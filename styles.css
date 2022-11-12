@@ -383,10 +383,13 @@ button {
 
 @media only screen and (max-width: 768px) {
 
-    .grid-container {
+    /*.grid-container {
         display: block;
-    }
+    }*/
     
+    .grid-container {
+        grid-template-columns: auto 1fr;
+    }
     
     /*.sidebar {
         position: fixed;
@@ -430,11 +433,10 @@ button {
         padding: 20px;
     }
 
-    /*.main {
+    .main {
         position: absolute;
         top: 0;
-        left: 4rem;
-    }*/
+    }
 
     .hamburger-menu {
         display: flex;
@@ -459,19 +461,18 @@ button {
     }
 
     .sidebar {
-        display: none;
+        position: fixed;
         width: 0;
         overflow-x: hidden;
+        z-index: 1;
     }
 }
 
 @media only screen and (max-width: 480px) {
 
-    /*.sidebar {
-        display: none;
-        width: 0;
-        overflow-x: hidden;
-    }*/
+    #sidebar-open {
+        width: 100%;
+    }
 
     .top-header {
         justify-content: space-between;
