@@ -101,7 +101,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px 50px;
+    padding: 30px 40px;
 
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
     z-index: 10;
@@ -112,6 +112,10 @@ hr {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+.top-header > div:first-child {
+    display: none;
 }
 
 .search-bar {
@@ -353,9 +357,9 @@ button {
 
 @media only screen and (max-width: 899px) {
 
-    .grid-container {
+    /*.grid-container {
         grid-template-columns: auto 1fr;
-    }
+    }*/
 
     .project-side {
         flex-direction: column;
@@ -384,39 +388,39 @@ button {
     }
     
     
-    .sidebar {
+    /*.sidebar {
         position: fixed;
         width: 4em;
-    }
+    }*/
 
-    .sidebar-logo {
+    /*.sidebar-logo {
         justify-content: center;
         padding: 10px;
-    }
+    }*/
 
-    .menu {
+    /*.menu {
         align-items: center;
-    }
+    }*/
 
-    .sidebar ul {
+    /*.sidebar ul {
         width: 100%;
-    }
+    }*/
 
-    .sidebar ul li {
+    /*.sidebar ul li {
         padding: 12px 4px;
-    }
+    }*/
 
-    .sidebar ul li:hover {
+    /*.sidebar ul li:hover {
         padding-left: 0px;
-    }
+    }*/
 
-    .sidebar a {
+    /*.sidebar a {
         justify-content: center;
-    }
+    }*/
 
-    .menu-text {
+    /*.menu-text {
         display: none;
-    }
+    }*/
 
     .header {
         padding: 20px;
@@ -426,30 +430,11 @@ button {
         padding: 20px;
     }
 
-    .main {
+    /*.main {
         position: absolute;
         top: 0;
         left: 4rem;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-
-    .sidebar {
-        /*display: none;*/
-        width: 0;
-        overflow-x: hidden;
-    }
-
-    .top-header {
-        justify-content: space-between;
-        min-width: 275px;
-    }
-
-    .top-header > div:first-child {
-        display: flex;
-        gap: 20px;
-    }
+    }*/
 
     .hamburger-menu {
         display: flex;
@@ -462,6 +447,48 @@ button {
         width: 30px;
         height: 3px;
     }
+
+    .top-header > div:first-child {
+        display: flex;
+        gap: 20px;
+    }
+
+    .top-header {
+        justify-content: space-between;
+        min-width: 275px;
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /*.sidebar {
+        display: none;
+        width: 0;
+        overflow-x: hidden;
+    }*/
+
+    .top-header {
+        justify-content: space-between;
+        min-width: 275px;
+    }
+
+    /*.hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger-menu div {
+        background-color: #1E1E1E;
+        width: 30px;
+        height: 3px;
+    }*/
 
     .header, .project-space {
         padding: 14px;
