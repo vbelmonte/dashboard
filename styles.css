@@ -28,11 +28,24 @@ body {
     height: 100vh;
 }
 
+.sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 20px;
+}
+
 .sidebar-logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     gap: 5px;
-    padding: 20px 30px 20px 20px;
+}
+
+.sidebar-close {
+    display: none;
+    font-size: 2rem;
+
 }
 
 .header {
@@ -63,6 +76,10 @@ hr {
 
 .svg-logo {
     min-width: 40px;
+}
+
+.logo-text {
+    flex-shrink: 0;
 }
 
 .sidebar ul {
@@ -442,6 +459,7 @@ button {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        cursor: pointer;
     }
 
     .hamburger-menu div {
@@ -465,14 +483,20 @@ button {
         width: 0;
         overflow-x: hidden;
         z-index: 1;
+        transition: width ease 0.5s;
+    }
+
+    .sidebar-close {
+        display: flex;
+        cursor: pointer;
     }
 }
 
 @media only screen and (max-width: 480px) {
 
-    #sidebar-open {
+    /*#sidebar-open {
         width: 100%;
-    }
+    }*/
 
     .top-header {
         justify-content: space-between;
